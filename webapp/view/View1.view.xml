@@ -1,0 +1,53 @@
+<mvc:View
+    controllerName="ui5cdswithparams.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+	xmlns:tab="sap.ui.table"
+>
+	<Shell id="shell">
+		<App id="app">
+			<pages>
+				<Page id="page" title="{i18n>title}">
+					<content >
+					
+
+						
+		
+               <Label text="EMP DESIGNATION"/>
+				<Input  value="" id="desig"  />
+				
+				
+                <Label></Label>
+				<Button text="getSpecific Data" type="Emphasized" press="getData"></Button>
+  					  <List id="obj"></List>
+               
+
+					<tab:Table rows="{model1>/ZC_LK_EMP}" id="uitab" selectionMode="Multi" >
+						<tab:columns>
+						
+
+						<tab:Column >
+						<tab:label><Label text="EMPID"></Label></tab:label>
+						<tab:template><Label text="{model1>Employeeid}"></Label></tab:template>
+						</tab:Column>
+
+						<tab:Column >
+						<tab:label><Label text="EMP NAME"></Label></tab:label>
+						<tab:template><Label text="{model1>Employeename}"></Label></tab:template>
+						</tab:Column>
+
+							<tab:Column >
+						<tab:label><Label text="EMP DESIGNATION"></Label></tab:label>
+						<tab:template><Label text="{model1>Employeedesignation}"></Label></tab:template>
+						</tab:Column>
+		
+						</tab:columns>
+						</tab:Table>
+		
+					</content>
+				</Page>
+			</pages>
+		</App>
+	</Shell>
+</mvc:View>
